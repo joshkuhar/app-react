@@ -27,3 +27,4 @@ module.exports = LocationList;
     address={location.address}
     website={location.website}
 */
+

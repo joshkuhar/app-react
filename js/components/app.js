@@ -1,6 +1,8 @@
 var React = require('react');
 var NavBar = require('./nav-bar');
 
+
+
 var App = function(props) {
     return (
         <div>
@@ -10,6 +12,8 @@ var App = function(props) {
             <h4> 
                 <NavBar />
             </h4>
+            <div>
+            </div>
             <div>
                 {props.children}
             </div>

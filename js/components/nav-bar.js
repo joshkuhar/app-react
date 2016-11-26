@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var NavItem = require('./display');
+var NavItem = require('./nav-item');
 
 var NavBar = function(props){
 	return (

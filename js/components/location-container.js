@@ -2,8 +2,9 @@ var React = require('react');
 var Location = require('./location');
 var DATA = require('../data');
 
-var LocationContainer = function(props) {
-    var location = DATA[props.params.locationId];
+var locationContainer = React.createClass ({
+    render() {
+    var location = DATA[this.props.params.locationId];
     return (
     	<div>
       		<Location name={location.name} />
@@ -12,7 +13,8 @@ var LocationContainer = function(props) {
     		<Location hours={location.hours} />
     		<Location website={location.website} />
 		</div>
-    );                         
-};
+    	);
+    }                         
+});
 
-module.exports = LocationContainer;
+module.exports = locationContainer;

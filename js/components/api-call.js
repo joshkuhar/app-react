@@ -2,9 +2,8 @@ require('babel-polyfill');
 require('isomorphic-fetch');
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Button = require('./button');
-var SearchBox = require('./input-box');
-var Display = require('./display');
+
+
 
 var React = require('react');
 var ReactDOM = require('react-dom');
