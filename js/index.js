@@ -7,18 +7,22 @@ var Router = router.Router;
 var Route = router.Route;
 var hashHistory = router.hashHistory;
 var IndexRoute = router.IndexRoute;
+var Provider = require('react-redux').Provider;
+var store = require('./store');
 var App = require('./components/app');
 var LocationListContainer = require('./components/location-list-container');
 var NavBar = require('./components/nav-bar');
 var LocationContainer = require('./components/location-container');
 
 var routes = (
-    <Router history={hashHistory}>
-        <Route path="/locations" component={App}>
-            <IndexRoute component={LocationListContainer} />
-            <Route path=":locationId" component={LocationContainer} />
-        </Route>
-    </Router>
+	<Provider store={store}>
+	    <Router history={hashHistory}>
+	        <Route path="/locations" component={App}>
+	            <IndexRoute component={LocationListContainer} />
+	            <Route path=":locationId" component={LocationContainer} />
+	        </Route>
+	    </Router>
+    </Provider>
 );
 
 document.addEventListener('DOMContentLoaded', function() {
