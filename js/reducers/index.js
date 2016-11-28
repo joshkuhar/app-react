@@ -1,6 +1,7 @@
 var actions = require('../actions/index');
 
-var initialLocationState = {};
+
+var initialLocationState = {name: ''};
 
 var locationReducer = function(state, action) {
     state = state || initialLocationState;
@@ -34,3 +35,4 @@ var locationReducer = function(state, action) {
 };
 
 exports.locationReducer = locationReducer;
+
