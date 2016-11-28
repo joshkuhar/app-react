@@ -2,10 +2,11 @@ var React = require('react');
 var Location = require('./location');
 
 var LocationList = function(props) {
-    var locations = Object.keys(props.locations)
-        .map(function(locationId, index) {
+    var locations = Object.keys(props.locations);
+    var vals = Object.values(props.locations);
+    console.log(vals);
+    var locals = locations.map(function(locationId, index) {
             var location = props.locations[locationId];
-            console.log(location);
             return (
                 <li key={index}>
                     <Location name={location.name}/>
@@ -14,17 +15,12 @@ var LocationList = function(props) {
         });
     return (
         <ul>
-            {locations}
+            {locals}
         </ul>
     );
 };
 
-module.exports = LocationList;
 
-/*
-    hours={location.hours} 
-    phoneNumber={location.phoneNumber}
-    address={location.address}
-    website={location.website}
-*/
+module.exports = LocationList;
+    
 
